@@ -1,0 +1,31 @@
+{
+  "name": "@smartrecruitment/source",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "clean": "turbo run clean",
+    "dev": "turbo run dev",
+    "format-and-lint": "biome check .",
+    "format-and-lint:fix": "biome check . --write",
+    "test": "turbo run test",
+    "check-types": "turbo run check-types"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.0.6",
+    "@types/jsdom": "^21.1.7",
+    "turbo": "^2.5.4"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.2.16",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "@emnapi/core": "^1.4.5",
+    "debug": "^4.4.1",
+    "semver": "^7.7.2"
+  }
+}
